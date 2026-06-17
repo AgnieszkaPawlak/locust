@@ -10,7 +10,7 @@ services:
   locust:
     image: ${IMAGE_NAME}:${IMAGE_TAG}
     container_name: locust-demo-runner
-    command: locust -f locustfile.py --host=http://app:8000
+    command: locust -f locustfilejson.py --host=https://jsonplaceholder.typicode.com
     depends_on:
       - app
     ports:
